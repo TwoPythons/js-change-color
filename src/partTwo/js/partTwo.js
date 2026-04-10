@@ -1,15 +1,30 @@
 //II parte, refactorizar para hacer toggle, nos basaremos en lo que hicimos en el archivo partOne.js
 
 function changeColor(){
-    //Escribe tu código aquí
-};
+const bg = document.getElementById("background");
+console.log("Текущий цвет:", bg.style.backgroundColor); // Посмотри это в консоли браузера (F12)
+
+
+  // Используем двойное или тройное равно для сравнения
+  if (bg.style.backgroundColor === "darkblue") {
+    bg.style.backgroundColor = "red";
+  } else {
+    bg.style.backgroundColor = "darkblue";
+  }
+}
 
 function changeText(){
-    //Escribe tu código aquí
-};
+const texto = document.getElementById ("text")
+
+if (texto.textContent === "darkblue") {
+   texto.textContent = "red";
+} else { 
+   texto.textContent = "darkblue";
+}}; 
 
 function changeStyles(){
-    //Escribe tu código aquí
+    changeColor();
+    changeText();
 };
 
 export {changeColor, changeText, changeStyles}
